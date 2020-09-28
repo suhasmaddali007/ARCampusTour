@@ -1,48 +1,59 @@
 ﻿/*
- * Code taken from https://vrgamedevelopment.pro/how-to-create-an-augmented-reality-app-in-unity/
+ * Code taken from https://www.youtube.com/watch?v=Ml2UakwRxjk&t=532s
  */
 
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.Experimental.XR;
 using UnityEngine.XR.ARSubsystems;
 
 public class PlacementIndicator : MonoBehaviour
 
     
 {
-    private ARRaycastManager rayManager;
-    private GameObject visual;
+    public GameObject positionIndicator;
+    private ARRaycastManager origin;
+    private Pose position;
+    private bool positionIsValid = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        // get the components
-        rayManager = FindObjectOfType<ARRaycastManager>();
-        visual = transform.GetChild(0).gameObject;
-
-        // hide the placement indicator visual
-        visual.SetActive(false);
+        origin = FindObjectOfType<ARRaycastManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // shoot a raycast from the center of the screen
-        List<ARRaycastHit> hits = new List<ARRaycastHit>();
-        rayManager.Raycast(new Vector2(Screen.width / 2, Screen.height / 2), hits, TrackableType.Planes);
+        updatePosition();
+        updatePositionIndicator();
+    }
 
-        // if we hit an AR plane surface, update the position and rotation
-        if (hits.Count > 0)
+    private void updatePositionIndicator()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void updatePosition()
+    {
+        var screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
+        var hits = new List<ARRaycastHit>();
+        origin.Raycast(screenCenter, hits, TrackableType.Planes);
+
+        positionIsValid = hits.Count > 0;
+        if (positionIsValid)
         {
-            transform.position = hits[0].pose.position;
-            transform.rotation = hits[0].pose.rotation;
+            positionIndicator.SetActive(true);
+            positionIndicator.transform.SetPositionAndRotation(position.position, position.rotation);
+        }
+        else
+        {
+            positionIndicator.SetActive(false);
         }
 
-        // enable the visual if it's disabled
-        if (!visual.activeInHierarchy)
-            visual.SetActive(true);
     }
 }
