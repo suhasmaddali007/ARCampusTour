@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/MapboxAR/Examples/Scenes/WorldScaleAR.unity
+    guid: c60dfd6bb74264e44b3dbf93e9d129c4
   m_configObjects:
-    com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 54453a5c7e6e63f48bc11164dfa8c06a,
+    com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 2b08370d4750d234c965a0f6d10329e2,
       type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 37ddd46d4b06b9d40ac585fac42af0a7,
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d7206af28952b5f4fbc42f125c25df0f,
       type: 2}
