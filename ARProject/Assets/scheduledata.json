@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "5f83599e87e5ac08d285b819",
+    "location": "https://goo.gl/maps/QGwaiRMR93s2RhQb9",
+    "time": 1450,
+    "days": "{T,Th}",
+    "course": "SER 515,CSE 564",
+    "userType": "Faculty"
+  },
+  {
+    "_id": "5f83599ea5a4eef153c57b90",
+    "location": "https://goo.gl/maps/QGwaiRMR93s2RhQb9",
+    "time": 1450,
+    "days": "{T,Th,F}",
+    "course": "SER 515,CSE 565",
+    "userType": "Existing Student"
+  },
+  {
+    "_id": "5f83599e497df83e88c6e007",
+    "location": "https://goo.gl/maps/QGwaiRMR93s2RhQb9",
+    "time": 1450,
+    "days": "{M,W}",
+    "course": "SER 515,CSE 566",
+    "userType": "Aspiring Sun Devil"
+  }
+]

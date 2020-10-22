@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MapboxAR/Examples/Scenes/WorldScaleAR.unity
-    guid: c60dfd6bb74264e44b3dbf93e9d129c4
+    path: Assets/Scenes/schedule.unity
+    guid: 9e4710af744209e4fadab640f265ff26
   m_configObjects:
-    com.unity.xr.arcore.PlayerSettings: {fileID: 11400000, guid: 2b08370d4750d234c965a0f6d10329e2,
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 895f53c05ad03a54a81e47cd4b76e157,
       type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d7206af28952b5f4fbc42f125c25df0f,
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7944f7c5158f6214ea00d9fa042637f0,
       type: 2}
